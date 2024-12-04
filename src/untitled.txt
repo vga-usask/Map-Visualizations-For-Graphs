@@ -1,0 +1,12 @@
+  layout_png.line_blend((nodeData[1] - minX2-150)*xScale2, (nodeData[2] - minY2-50)*yScale2,
+                                      (nodeData[1] - minX2-150)*xScale2, ((nodeData[4] - minY2+50)*yScale2),
+                                      edge_opacity, 0, 255, 0);
+                     layout_png.line_blend((nodeData[1] - minX2-150)*xScale2, (nodeData[4] - minY2+50)*yScale2,
+                                      ((nodeData[3] - minX2+50)*xScale2), ((nodeData[4] - minY2+50)*yScale2),
+                                      edge_opacity, 254, 0, 0);
+                    layout_png.line_blend((nodeData[3] - minX2+50)*xScale2, (nodeData[4] - minY2+50)*yScale2,
+                                      (nodeData[3] - minX2+50)*xScale2, ((nodeData[2] - minY2-50)*yScale2),
+                                      edge_opacity, 254, 0, 0);
+                    layout_png.line_blend((nodeData[3] - minX2+50)*xScale2, (nodeData[2] - minY2-50)*yScale2,
+                                      ((nodeData[1] - minX2)*xScale2-50), ((nodeData[2] - minY2-50)*yScale2),
+                                      edge_opacity, 254, 0, 0);
