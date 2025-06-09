@@ -30,16 +30,8 @@ make graph_viewer
 
 After successful compilation, you can run the program using a command like:
 
-./graph_viewer \
-  ./paper/our3/small_graph_size_10_graph_1/outputs_convert/Vpolygon_points.txt \
-  ./paper/our3/small_graph_size_10_graph_1/outputs_convert/edgelist.txt \
-  ./paper/our3/small_graph_size_10_graph_1 \
-  2000 1 wg 1 1 approximate 1 1 \
-  1 1 png svg gpu 1866 \
-  ./paper/our3/small_graph_size_10_graph_1/outputs_convert/node_polygon_mapping.txt \
-  0.7 1 1 \
-  ./polygon/default_node_map_dep_map.txt \
-  ./polygon/default_node_map_dep_map.txt
+./graph_viewer ./paper/our3/small_graph_size_10_graph_1/outputs_convert/Vpolygon_points.txt ./paper/our3/small_graph_size_10_graph_1/outputs_convert/edgelist.txt ./paper/our3/small_graph_size_10_graph_1 2000 1 wg 1 1 approximate 1 1 1 png svg gpu 1866 ./paper/our3/small_graph_size_10_graph_1/outputs_convert/node_polygon_mapping.txt \
+  0.7 1 1 ./polygon/default_node_map_dep_map.txt ./polygon/default_node_map_dep_map.txt
 
 📦 Breakdown of Command-Line Arguments
 
