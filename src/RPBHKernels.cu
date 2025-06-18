@@ -18,6 +18,12 @@ static __device__ volatile float radiusd;
 /******************************************************************************/
 /*** compute center and radius ************************************************/
 /******************************************************************************/
+__global__ void ResetGlobalStateKernel() {
+    blkcntd = 0;
+    maxdepthd = 1;
+    stepd = -1;
+    bottomd = gridDim.x * blockDim.x; // just a placeholder, will be updated by BoundingBoxKernel
+}
 
 __global__
 __launch_bounds__(THREADS1, FACTOR1)
