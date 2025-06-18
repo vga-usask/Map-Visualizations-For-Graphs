@@ -188,11 +188,10 @@ printf("MAX DEGREE IS %d\n", max_degree);
         mp_count = deviceProp.multiProcessorCount;
         max_threads_per_block = deviceProp.maxThreadsPerBlock;
 
-        nnodes = std::max(2 * nbodies, mp_count * max_threads_per_block);
+       nnodes = std::max(nbodies * 4, mp_count * max_threads_per_block * 2);
 
-        // Round up to next multiple of WARPSIZE
-        while ((nnodes & (WARPSIZE-1)) != 0) nnodes++;
-        nnodes--;
+// Ensure multiple of WARPSIZE
+while ((nnodes & (WARPSIZE - 1)) != 0) nnodes++;
 
         // child stores structure of the quadtree. values point to IDs.
         cudaCatchError(cudaMalloc((void **)&childl,  sizeof(int)   * (nnodes+1) * 4));
@@ -297,7 +296,8 @@ printf("MAX DEGREE IS %d\n", max_degree);
 
  void CUDAForceAtlas2::doStep(int inter)
 {
- 
+  ResetGlobalStateKernel<<<1, 1>>>();
+cudaCatchError(cudaGetLastError());
     cudaGetLastError(); // clear any errors
         exGravityKernel2<<<mp_count * FACTOR6, THREADS6>>>(nbodies, k_g,strong_gravity, body_massl, body_posl,fxl, fyl,Cx,  Cy,  d_points, d_externa_polygonX,d_externa_polygonX_x,  d_externa_polygonX_y,max_degree,  num_polygons,  num_points, d_effective_d);
         cudaCatchError(cudaGetLastError());
