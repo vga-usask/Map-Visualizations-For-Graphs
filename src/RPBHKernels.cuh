@@ -53,6 +53,7 @@
 
 extern __device__ volatile int errd;
 extern __device__ float minxdg, minydg, maxxdg, maxydg;
+__global__ void ResetGlobalStateKernel();
 
 __global__
 __launch_bounds__(THREADS1, FACTOR1)
