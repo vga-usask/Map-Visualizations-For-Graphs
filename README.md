@@ -44,6 +44,10 @@ Dependencies
 \`\`\`
 sudo apt install libcairo2-dev
 sudo apt-get install libboost-all-dev
+sudo apt-get install libgmp-dev
+sudo apt-get install libmpfr-dev
+sudo apt-get install libgraphviz-dev
+
 \`\`\`
 
 ▶️ Running the Program
