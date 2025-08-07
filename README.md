@@ -12,7 +12,7 @@ Clone the Repository
 
 git clone https://github.com/vga-usask/Map-Visualizations-For-Graphs.git 
 
-cd PolygonBasedGraphVisualization
+cd Map-Visualizations-For-Graphs
 
 \`\`\`
 
@@ -38,6 +38,12 @@ cd builds/linux
 
 make graph\_viewer
 
+\`\`\`
+
+Dependencies
+\`\`\`
+sudo apt install libcairo2-dev
+sudo apt-get install libboost-all-dev
 \`\`\`
 
 ▶️ Running the Program
