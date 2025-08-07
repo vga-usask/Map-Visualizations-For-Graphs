@@ -4,6 +4,7 @@
 #define RPGraph_hpp
 #include <vector>
 #include <string>
+#include <cstdint>
 #include <unordered_map>
 #include "RPCommon.hpp" // Include for singleton access if necessary
 
