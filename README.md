@@ -38,6 +38,10 @@ cd builds/linux
 
 make graph\_viewer
 
+or 
+
+sudo "PATH=$PATH" make graph_viewer 
+
 \`\`\`
 
 Dependencies
@@ -53,6 +57,8 @@ sudo apt-get install libgraphviz-dev
 ▶️ Running the Program
 
 After successful compilation, you can run the program using a command like:
+
+Unzip builds.zip
 
 \`\`\`sh
 
